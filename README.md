@@ -2,7 +2,7 @@
 
 This repository contains the numerical experiments for **“On the Linear
 Convergence of Bregman Proximal Gradient Methods with Applications to
-Kullback–Leibler Regression.”**
+Kullback–Leibler Regression.”** https://arxiv.org/pdf/2607.05539
 
 The code compares BPGM with Burg entropy, BPGM with smoothed Burg entropy,
 Euclidean proximal gradient, and Richardson–Lucy on synthetic KL regression
