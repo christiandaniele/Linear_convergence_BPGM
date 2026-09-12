@@ -1,8 +1,4 @@
 """Algorithms used in the numerical section of the paper.
-
-The implementations in this module preserve the numerical behavior of the
-original experimental notebook. Only comments, docstrings, and organization
-have been changed.
 """
 
 import numpy as np
@@ -49,11 +45,10 @@ def BPGM(
     bt=True,
 ):
     """Run BPGM, Euclidean PGM, or Richardson--Lucy.
-
-    Parameters follow the original notebook. In particular, ``phi='burg'``
-    gives Burg entropy for ``xi=0`` and smoothed Burg entropy for ``xi>0``;
+    
+    ``phi='burg'``  gives Burg entropy for ``xi=0`` and smoothed Burg entropy for ``xi>0``;
     ``phi='l2'`` gives Euclidean proximal gradient; and ``phi='RL'`` gives
-    Richardson--Lucy. The update and backtracking rules are unchanged.
+    Richardson--Lucy.
     """
     current_dtype = x_0.dtype
     x = x_0.copy()
