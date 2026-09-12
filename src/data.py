@@ -6,9 +6,6 @@ from scipy.stats import poisson
 
 def generate_matrix(M, N=500, cond_target=50, dtype=np.float64):
     """Generate the nonnegative matrix described in Appendix B.1.
-
-    Randomness intentionally uses NumPy's global state, as in the original
-    notebook. Set ``np.random.seed`` before calling this function.
     """
     A = np.random.rand(M, N).astype(dtype)
     norm = np.linalg.norm(A)
@@ -31,7 +28,7 @@ def generate_matrix(M, N=500, cond_target=50, dtype=np.float64):
 def generate_standard_data(A, b, Q=100, P=None, dtype=np.float64):
     """Generate the noisy data used by the original notebook.
 
-    The operations and scaling are intentionally preserved. ``P`` controls
+     ``P`` controls
     the number of nonzero ground-truth entries and defaults to ``N``.
     """
     _, N = A.shape
@@ -46,10 +43,6 @@ def generate_standard_data(A, b, Q=100, P=None, dtype=np.float64):
 
 def generate_interior_data(A, b, lam, Q=1, noise=True, dtype=np.float64):
     """Generate data whose target minimizer is strictly positive.
-
-    This is the English-documented version of the original function. Its
-    numerical operations are unchanged. It requires the square/full-rank
-    setting because it uses ``np.linalg.solve`` with ``A`` and ``A.T``.
     """
     M, N = A.shape
     ones_N = np.ones((N, 1), dtype=dtype)
