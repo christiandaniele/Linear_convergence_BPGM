@@ -6,8 +6,7 @@ Kullback–Leibler Regression.”** https://arxiv.org/pdf/2607.05539
 
 The code compares BPGM with Burg entropy, BPGM with smoothed Burg entropy,
 Euclidean proximal gradient, and Richardson–Lucy on synthetic KL regression
-problems. The implementation of the numerical updates is preserved from the
-original experimental notebook.
+problems.
 
 ## Experimental regimes
 
